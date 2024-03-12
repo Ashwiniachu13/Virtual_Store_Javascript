@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+       body{
+        background-color:rgb(169, 210, 220);
+      }
+      h1 {
+        text-align: center;
+      }
+      #hme{
+        background-color:white;
+        color: black;
+        padding: 10px;
+        font-size: large;
+        text-align: center;
+       
+      }
+    </style>
+  </head>
+  <body>
+   
+    <center><img src="https://www.bing.com/th/id/OGC.331a0313221e8d95709c5474bc166a79?pid=1.7&rurl=https%3a%2f%2fcdn.dribbble.com%2fusers%2f5804730%2fscreenshots%2f14516978%2foc.gif&ehk=ycMTIhCEHTocOdXwJ8CxF%2bYnHffOfQneKobKsCzTSOA%3d" style="width: 350px;height: 450px;" alt=""></center><br>
+    <center><button id="hme">Continue Shopping</button></center>
+    <script>
+      let btn = document.getElementById("hme");
+      btn.addEventListener("click", () => {
+        window.location.assign("./homepage.html");
+      });
+    </script>
+  </body>
+</html>
