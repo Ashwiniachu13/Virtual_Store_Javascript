@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  body{
+        background-color:rgb(169, 210, 220);
+      }
+button{
+    padding:10px;
+    width: 70px;
+   background-color: white;
+    color:black;
+    font-size: 15px;
+}
+div{
+   margin-top: 1%;
+   border: 5px solid black;
+  
+   color:black;
+   width: 350px;
+   text-align: center;
+   background-color: rgb(250, 202, 238);
+   box-shadow: 0px 0px 2px 2px black;
+   margin-left: 40%;
+}
+#img{
+    border: 2px solid white;
+    border-radius: 5px;
+}
+</style>
+</head>
+<body>
+<button>Back</button>
+<br><br><br>
+<div></div>
+
+<script>  
+let divget=document.getElementsByTagName("div");
+let btn=document.getElementsByTagName("button");
+
+btn[0].addEventListener("click",()=>{
+window.history.back();
+})
+let val=JSON.parse(localStorage.getItem("seemore"));
+console.log(val);
+let span1get=document.createElement("span");
+let img=document.createElement("img");
+img.id="img";
+img.style.width="150px";
+img.style.paddingTop="3%"
+img.setAttribute("src",val.image);
+
+
+let cate=document.createElement("h3");
+cate.innerText="Category : "+ val.category;
+
+let desc=document.createElement("p");
+
+desc.innerText="Description : "+ val.description;
+desc.style.textAlign="justify";
+desc.style.marginLeft="5px";
+desc.style.marginRight="5px";
+
+let price=document.createElement("p");
+price.innerText="Price : $"+ val.price;
+
+span1get.appendChild(img)
+span1get.append(cate)
+span1get.append(desc)
+span1get.append(price)
+divget[0].appendChild(span1get)
+
+</script>
+</body>
+</html>
